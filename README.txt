@@ -1,4 +1,6 @@
-Simulation.py provide a Multilevel Hidden Markov Model based Federated Conformal Prediction approach, the experiments use simulated data.
+This code corresponds to the numerical results in Section 4 of the manuscript 'Federated Conformal Approach for Trustworthy Uncertainty Quantification in Distributed Fleet Prognostics.'
+
+By default, N_REPS is set to 10. For a quick reproducibility check or to verify that the code runs correctly on your system, you may reduce N_REPS to a smaller value (e.g., 1 or 2).
 
 We design four experimental settings to examine whether the proposed approach remains effective under various forms of model misspecification and heterogeneity: (i) different numbers of HMM latent states, (ii) violations of the left-to-right transition structure, (iii) violations of the shared emission assumption, and (iv) fleet-level heterogeneity. 
 
