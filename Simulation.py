@@ -23,9 +23,10 @@ import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 from sklearn.model_selection import train_test_split
 
-os.makedirs(r"C:\Users\dogha\Desktop\HMM_simulation\Simulation_Results\Models", exist_ok=True)
-os.makedirs(r"C:\Users\dogha\Desktop\HMM_simulation\Simulation_Results\Outputs", exist_ok=True)
-os.makedirs(r"C:\Users\dogha\Desktop\HMM_simulation\Simulation_Results\Diagnostics", exist_ok=True)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+os.makedirs(os.path.join(script_dir, "Outputs"), exist_ok=True)
+os.makedirs(os.path.join(script_dir, "Diagnostics"), exist_ok=True)
 
 ########################################
 # GLOBAL SETTINGS
@@ -204,7 +205,6 @@ class SyntheticDGP:
         if fleet_transition is None:
             fleet_transition = np.mean(self.fleet_A, axis=0).copy()
         
-        #TODO: Test fleet noise multiplier for extra challenge?
         test_noise_mult = 1.0
 
         test_units = []
@@ -244,7 +244,8 @@ def plot_diagnostics(dgp, fleet_data, tag="base"):
     """
     Generate plots to verify generated synthetic data
     """
-    fig_dir = r"C:\Users\dogha\Desktop\HMM_simulation\Simulation_Results\Diagnostics"
+    # use your own path for diagnostics visualization
+    fig_dir = os.path.join(script_dir, "Diagnostics")
 
     fig, axes = plt.subplots(dgp.K, 1, figsize=(14, 3 * dgp.K), sharex=False)
     if dgp.K == 1:
@@ -1114,6 +1115,7 @@ def run_experiment_with_replications(dgp_params, fit_M, n_reps=10,
 ########################################
 
 def main():
+    # default value for N_REPS is 10, to reduce the running time, adjust N_REPS = 1 for short version
     N_REPS = 10
     NUM_TEST = 20
     summary_rows = []
@@ -1208,7 +1210,7 @@ def main():
             print(f"  emission_shift={delta}, {label} ...")
 
             #modify 0 to N_REPS
-            for rep in range(0):
+            for rep in range(N_REPS):
                 seed = rep * 1000 + 42
                 res = run_single_experiment(
                     dgp_params=dgp_C, fit_M=4, use_federated=use_fed,
@@ -1254,13 +1256,13 @@ def main():
 
     
     df = pd.DataFrame(summary_rows)
-    raw_path = r"C:\Users\dogha\Desktop\HMM_simulation\Simulation_Results\Outputs\simulation_robustness_raw.csv"
+    raw_path = os.path.join(script_dir, "Outputs\simulation_robustness_raw.csv")
     df.to_csv(raw_path, index=False)
     print(f"\nRaw per-rep results saved to {raw_path}")
 
 
     agg_df = _aggregate_results(df)
-    agg_path = r"C:\Users\dogha\Desktop\HMM_simulation\Simulation_Results\Outputs\simulation_robustness_summary.csv"
+    agg_path = os.path.join(script_dir, "Outputs\simulation_robustness_summary.csv")
     agg_df.to_csv(agg_path, index=False)
     print(f"Aggregated summary saved to {agg_path}")
 
