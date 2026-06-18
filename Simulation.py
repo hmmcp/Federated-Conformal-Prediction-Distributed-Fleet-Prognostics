@@ -24,10 +24,11 @@ from torch.utils.data import Dataset, DataLoader
 from sklearn.model_selection import train_test_split
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
+outputs_dir = os.path.join(script_dir, "Outputs")
+diagnostics_dir = os.path.join(script_dir, "Diagnostics")
 
-os.makedirs(os.path.join(script_dir, "Outputs"), exist_ok=True)
-os.makedirs(os.path.join(script_dir, "Diagnostics"), exist_ok=True)
-
+os.makedirs(outputs_dir, exist_ok=True)
+os.makedirs(diagnostics_dir, exist_ok=True)
 ########################################
 # GLOBAL SETTINGS
 ########################################
@@ -245,7 +246,7 @@ def plot_diagnostics(dgp, fleet_data, tag="base"):
     Generate plots to verify generated synthetic data
     """
     # use your own path for diagnostics visualization
-    fig_dir = os.path.join(script_dir, "Diagnostics")
+    fig_dir = diagnostics_dir
 
     fig, axes = plt.subplots(dgp.K, 1, figsize=(14, 3 * dgp.K), sharex=False)
     if dgp.K == 1:
@@ -1256,13 +1257,13 @@ def main():
 
     
     df = pd.DataFrame(summary_rows)
-    raw_path = os.path.join(script_dir, "Outputs\simulation_robustness_raw.csv")
+    raw_path = os.path.join(outputs_dir, "simulation_robustness_raw.csv")
     df.to_csv(raw_path, index=False)
     print(f"\nRaw per-rep results saved to {raw_path}")
 
 
     agg_df = _aggregate_results(df)
-    agg_path = os.path.join(script_dir, "Outputs\simulation_robustness_summary.csv")
+    agg_path = os.path.join(outputs_dir, "simulation_robustness_summary.csv")
     agg_df.to_csv(agg_path, index=False)
     print(f"Aggregated summary saved to {agg_path}")
 
