@@ -1203,7 +1203,7 @@ def main():
     print("EXPERIMENT C: Violation of shared-emission assumption")
     print("=" * 70)
 
-    for delta in [0.0, 0.1, 0.3, 0.5, 1.0]:
+    for delta in [0.1, 0.3, 0.5, 1.0]:
         dgp_C = copy.deepcopy(base_dgp)
         dgp_C['fleet_emission_shift'] = delta
         for use_fed in [True, False]:
@@ -1231,7 +1231,7 @@ def main():
     print("EXPERIMENT D: Fleet heterogeneity in transition dynamics")
     print("=" * 70)
 
-    for conc in [5.0, 15.0, 50.0, 150.0, 500.0]:
+    for conc in [500.0, 150.0, 50.0, 15.0, 5.0]:
         dgp_D = copy.deepcopy(base_dgp)
         dgp_D['dirichlet_concentration'] = conc
         for use_fed in [True, False]:
