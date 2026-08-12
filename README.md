@@ -7,16 +7,6 @@ This repository provides the code used for the numerical studies presented in:
 Manuscript:
 https://www.techrxiv.org/doi/full/10.36227/techrxiv.176902673.30333692/v1
 
-If you find this repository useful, please cite:
-
-```bibtex
-@article{li2026federated,
-  title={Federated Conformal Approach for Trustworthy Uncertainty Quantification in Distributed Fleet Prognostics},
-  author={Li, Zihan and Gahrooei, Mostafa Reisi and Kim, Minhee},
-  year={2026},
-  publisher={TechRxiv}
-}
-```
 
 ## Repository Overview
 
@@ -56,15 +46,7 @@ under heterogeneous federated environments.
 
 ## ADNI Experiment
 
-The ADNI experiment evaluates the proposed framework on a second real-world application and corresponds to **Section 5.3.2** of the manuscript.
 
-The experiment can be reproduced using:
-
-```text
-ADNI.py
-```
-
-Please refer to the manuscript for details regarding data preprocessing, model configuration, federated settings, and evaluation procedures.
 
 ---
 
@@ -167,15 +149,4 @@ Reducing `N_REPS` can substantially decrease the computational cost, but the res
 
 ---
 
-## Citation
-
-If you use this code or build upon this work, please cite:
-
-```bibtex
-@article{li2026federated,
-  title={Federated Conformal Approach for Trustworthy Uncertainty Quantification in Distributed Fleet Prognostics},
-  author={Li, Zihan and Gahrooei, Mostafa Reisi and Kim, Minhee},
-  year={2026},
-  publisher={TechRxiv}
-}
 ```
