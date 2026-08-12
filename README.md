@@ -46,7 +46,9 @@ under heterogeneous federated environments.
 
 ## ADNI Experiment
 
+A detailed description of the features used in the ADNI experiment is provided in **Supplementary_Materials_ADNI_Features**. Because the ADNI dataset requires authorized access, the raw data cannot be publicly distributed with this repository. Researchers interested in accessing the dataset should submit a data access request through the official **Alzheimer's Disease Neuroimaging Initiative (ADNI)** website (https://adni.loni.usc.edu/).
 
+The ADNI experiment follows the same general computational framework as the C-MAPSS experiment. Therefore, the code provided for the C-MAPSS dataset can be adapted to reproduce the ADNI analysis after obtaining the required ADNI data and performing the corresponding preprocessing.
 
 ---
 
