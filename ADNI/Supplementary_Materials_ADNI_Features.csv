@@ -1,0 +1,59 @@
+﻿CRFNAME,TBLNAME,FLDNAME,TEXT,CODE
+Biomarker Samples,BIOMARK,BIBLOOD,Which of the following was collected at this visit?,1=Blood
+Biomarker Samples,BIOMARK,BICSF,,1=CSF
+Biomarker Samples,BIOMARK,BIFAST,Overnight fast from midnight?,1=Yes;0=No
+Biomarker Samples,BIOMARK,BILAVAMT,Amount Collected  <!--Plasma-->,0..20
+Biomarker Samples,BIOMARK,BILAVCENT,Centrifuged Time <!--Plasma-->,
+Biomarker Samples,BIOMARK,BILAVFROZ,Time Frozen  <!--Plasma-->,
+Biomarker Samples,BIOMARK,BILAVTIME,Time Collected <!--Plasma-->,
+Biomarker Samples,BIOMARK,BILAVTRNS,Transfer Time  <!--Plasma-->,
+Biomarker Samples,BIOMARK,BILAVVOL,Volume of Plasma Transferred  <!--Plasma-->,0..13
+Biomarker Samples,BIOMARK,BIREDAMT,Amount Collected  <!--Serum-->,0..20
+Biomarker Samples,BIOMARK,BIREDCENT,Centrifuged Time  <!--Serum-->,
+Biomarker Samples,BIOMARK,BIREDFROZ,Time Frozen  <!--Serum-->,
+Biomarker Samples,BIOMARK,BIREDTIME,Time Collected  <!--Red Top-->,
+Biomarker Samples,BIOMARK,BIREDTRNS,Transfer Time  <!--Serum-->,
+Biomarker Samples,BIOMARK,BIREDVOL,Volume of Serum Transferred  <!--Serum-->,0..13
+Concurrent Medications Log,RECCMEDS,CMCONT,Is the medication continuing?,1=Yes;0=No
+Key ADNI tables merged into one table,ADNIMERGE,AGE,Age at baseline,-4
+Key ADNI tables merged into one table,ADNIMERGE,PTEDUCAT,Education,-4
+Key ADNI tables merged into one table,ADNIMERGE,PTETHCAT,Ethnicity,-4
+Key ADNI tables merged into one table,ADNIMERGE,PTGENDER,Sex,-4
+Key ADNI tables merged into one table,ADNIMERGE,PTMARRY,Marital status at baseline,-4
+Key ADNI tables merged into one table,ADNIMERGE,PTRACCAT,Race,-4
+Neurological Exam,NEUROEXM,NXAUDITO,2. Significant Auditory Impairment,1=Absent; 2=Present
+Neurological Exam,NEUROEXM,NXFINGER,7a. Cerebellar - Finger to Nose,1=Normal; 2=Abnormal
+Neurological Exam,NEUROEXM,NXGAIT,11. Gait,1=Normal; 2=Abnormal
+Neurological Exam,NEUROEXM,NXHEEL,7b. Cerebellar - Heel to Shin,1=Normal; 2=Abnormal
+Neurological Exam,NEUROEXM,NXMOTOR,6. Motor Strength,1=Normal; 2=Abnormal
+Neurological Exam,NEUROEXM,NXNERVE,5. Cranial Nerves,1=Normal; 2=Abnormal
+Neurological Exam,NEUROEXM,NXSENSOR,8. Sensory,1=Normal; 2=Abnormal
+Neurological Exam,NEUROEXM,NXTENDON,9. Deep Tendon Reflexes,1=Normal; 2=Abnormal
+Neurological Exam,NEUROEXM,NXTREMOR,3. Tremor,1=Absent; 2=Present
+Neurological Exam,NEUROEXM,NXVISUAL,1. Significant Visual Impairment,1=Absent; 2=Present
+Participant Demographic Information,PTDEMOG,PTHAND,3. Participant Handedness,1=Right;2=Left
+Participant Demographic Information,PTDEMOG,PTHOME,8. Type of Participant residence,1=House (owned or rented); 2=Condo/Co-op (owned); 3=Apartment (rented); 4=Mobile Home; 5=Retirement Community; 6=Assisted Living; 7=Skilled Nursing Facility; 8=Other (specify)
+Participant Demographic Information,PTDEMOG,PTNOTRT,7. Participant Retired?,1=Yes;0=No
+Participant Demographic Information,PTDEMOG,PTPLANG,10. Participant's Primary Language,1=English; 2=Spanish; 3=Other (specify)
+Participant Demographic Information,PTDEMOG,PTSOURCE,Information Source,1=Participant Visit;2=Telephone Call
+Participant Demographic Information,PTDEMOG,PTTLANG,9. Language to be used for testing the Participant,1=English; 2=Spanish
+Physical Exam,PHYSICAL,PXABDOM,6. Abdomen,1=Normal; 2=Abnormal
+Physical Exam,PHYSICAL,PXCHEST,4. Chest,1=Normal; 2=Abnormal
+Physical Exam,PHYSICAL,PXEDEMA,8. Edema,1=Normal; 2=Abnormal
+Physical Exam,PHYSICAL,PXEXTREM,7. Extremities,1=Normal; 2=Abnormal
+Physical Exam,PHYSICAL,PXGENAPP,1. General Appearance,1=Normal; 2=Abnormal
+Physical Exam,PHYSICAL,PXHEADEY,"2. Head, Eyes, Ears, Nose and Throat",1=Normal; 2=Abnormal
+Physical Exam,PHYSICAL,PXHEART,5. Heart,1=Normal; 2=Abnormal
+Physical Exam,PHYSICAL,PXMUSCUL,11. Musculoskeletal,1=Normal; 2=Abnormal
+Physical Exam,PHYSICAL,PXNECK,3. Neck,1=Normal; 2=Abnormal
+Physical Exam,PHYSICAL,PXPERIPH,9. Peripheral Vascular,1=Normal; 2=Abnormal
+Physical Exam,PHYSICAL,PXSKIN,10. Skin and Appendages,1=Normal; 2=Abnormal
+Vital Signs,VITALS,VSBPDIA,Diastolic - mmHg,36..130
+Vital Signs,VITALS,VSBPSYS,Systolic - mmHg,76..250
+Vital Signs,VITALS,VSHEIGHT,2a. Height,
+Vital Signs,VITALS,VSPULSE,4. Seated Pulse Rate (per minute),40..130
+Vital Signs,VITALS,VSRESP,5. Respirations (per minute),6..40
+Vital Signs,VITALS,VSTEMP,6a. Temperature,
+Vital Signs,VITALS,VSWEIGHT,1a. Weight,
+Rurality – RUCA & RUCC,RURALITY,RUCC,RUCC:,1=1; 10=10; 2=2; 3=3; 4=4; 5=5; 6=6; 7=7; 8=8; 9=9; 99=County name not known/refused
+Participant Demographics,PTDEMOG,PTDOBYY,2b. Participant Year of Birth,1900..1980
