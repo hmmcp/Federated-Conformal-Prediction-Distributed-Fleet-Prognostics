@@ -25,13 +25,13 @@ For the Remaining Useful Life (RUL) prediction task, we use a **Long Short-Term 
 
 We evaluate three uncertainty quantification approaches:
 
-1. **No CP**
+1. **No CP**:
    Prediction intervals are generated directly by the baseline QR model without conformal calibration.
 
-2. **FCP**
+2. **FCP**:
    Prediction intervals are calibrated using the baseline **Federated Conformal Prediction (FCP)** approach.
 
-3. **Proposed Method**
+3. **Proposed Method**:
    Prediction intervals are calibrated using the proposed **Multilevel HMM-based Federated Conformal Prediction** approach.
 
 The methods are compared in terms of:
