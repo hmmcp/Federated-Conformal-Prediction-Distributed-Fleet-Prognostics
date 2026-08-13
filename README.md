@@ -15,7 +15,6 @@ The repository contains numerical experiments using both real-world and simulate
 The main experiments are organized as follows:
 
 * **`C-MAPSS/main.py`**, together with **`functions.py`** and **`models.py`**, reproduces the experiments reported in **Section 5.3.1** of the manuscript using the **NASA C-MAPSS dataset**.
-* **`ADNI.py`** reproduces the experiments reported in **Section 5.3.2** using the **ADNI dataset**.
 * **`Simulation/Simulation.py`** generates the synthetic experiments designed to evaluate the robustness of the proposed method under different forms of model misspecification and fleet heterogeneity.
 
 ---
