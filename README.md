@@ -53,11 +53,8 @@ The ADNI experiment follows the same general computational framework as the C-MA
 
 ## Simulation Study
 
-The simulation experiments are implemented in:
+The simulation experiments are implemented in: **`Simulation/Simulation.py`**
 
-```text
-Simulation/Simulation.py
-```
 
 The simulation study is designed to investigate whether the proposed approach remains effective under different forms of model misspecification and heterogeneity.
 
