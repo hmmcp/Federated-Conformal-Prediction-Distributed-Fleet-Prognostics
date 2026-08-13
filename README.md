@@ -39,7 +39,7 @@ The methods are compared in terms of:
 * **Empirical coverage probability**, and
 * **Prediction interval width**
 
-under heterogeneous federated environments. A pre-trained model can be found in**`C-MAPSS/Models/QR_FD1_NL2_CSR0.2_C5_RS10000.pth`**. This model can be loaded to reproduce similar results. 
+under heterogeneous federated environments. A pre-trained model can be found in **`C-MAPSS/Models/QR_FD1_NL2_CSR0.2_C5_RS10000.pth`**. This model can be loaded to reproduce similar results. 
 
 ---
 
