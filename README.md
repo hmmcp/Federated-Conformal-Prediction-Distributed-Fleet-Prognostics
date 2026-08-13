@@ -116,7 +116,7 @@ The main evaluation metrics are:
 
 ## Reproducibility
 
-By default, the hyperparameter:
+In  **`Simulation/Simulation.py`**, by default, the hyperparameter:
 
 ```python
 N_REPS = 10
