@@ -1,0 +1,9 @@
+NumPy: 2.0.1
+Pandas: 2.3.3
+Matplotlib: 3.10.8
+TDigest: 0.5.2.1
+PyTorch: 2.11.0.dev20260206+cu128
+Scikit-learn: 1.7.1
+CUDA available: True
+CUDA version: 12.8
+GPU: NVIDIA GeForce RTX 5070 Ti
