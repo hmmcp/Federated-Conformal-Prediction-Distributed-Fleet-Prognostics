@@ -74,7 +74,6 @@ For each fleet, units are divided into:
 * **70% training units**
 * **30% calibration units**
 
-The split is performed at the **unit level** to avoid information leakage between the training and calibration sets.
 
 In addition, a separate **test fleet containing 20 units** is generated. The test fleet follows a different transition matrix from the training fleets, introducing a controlled **distribution shift** between the training/calibration and test environments.
 
