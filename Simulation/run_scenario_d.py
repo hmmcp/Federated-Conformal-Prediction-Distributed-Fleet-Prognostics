@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+from common import *
+
+
+def main():
+    # default value for N_REPS is 10, to reduce the running time, adjust N_REPS = 1 for short version
+    N_REPS = 10
+    NUM_TEST = 20
+    summary_rows = []
+
+    base_dgp = dict(
+        num_true_states=4,
+        num_fleets=5,
+        units_per_fleet=[20, 20, 20, 20, 20],
+        trajectory_range=(80, 150),
+        dirichlet_concentration=50.0,
+        fleet_emission_shift=0.0,
+        reverse_prob=0.0,
+        base_transition_stay=0.96,
+        signal_momentum=0.5,
+    )
+
+    print("\n" + "=" * 70)
+    print("EXPERIMENT D: Fleet heterogeneity in transition dynamics")
+    print("=" * 70)
+
+    for conc in [500.0, 150.0, 50.0, 15.0, 5.0]:
+        dgp_D = copy.deepcopy(base_dgp)
+        dgp_D['dirichlet_concentration'] = conc
+        for use_fed in [True, False]:
+            label = "Federated" if use_fed else "Centralized"
+            print(f"  dirichlet_conc={conc}, {label} ...")
+
+            for rep in range(N_REPS):
+                seed = rep * 1000 + 42
+                res = run_single_experiment(
+                    dgp_params=dgp_D, fit_M=4, use_federated=use_fed,
+                    random_seed=seed, num_test_units=NUM_TEST,
+                )
+                for method, vals in res.items():
+                    if vals:
+                        summary_rows.append({
+                            'Experiment': 'D_fleet_heterogeneity', 'M_true': 4, 'M_fit': 4,
+                            'Training': label, 'reverse_prob': 0.0,
+                            'emission_shift': 0.0, 'dirichlet_conc': conc,
+                            'CP_Method': method, 'rep': rep,
+                            'Coverage': vals['coverage'], 'Width': vals['width'],
+                        })
+
+    df = pd.DataFrame(summary_rows)
+    raw_path = os.path.join(outputs_dir, "simulation_scenario_d_raw.csv")
+    df.to_csv(raw_path, index=False)
+    print(f"\nRaw per-rep results saved to {raw_path}")
+
+    agg_df = _aggregate_results(df)
+    agg_path = os.path.join(outputs_dir, "simulation_scenario_d_summary.csv")
+    agg_df.to_csv(agg_path, index=False)
+    print(f"Aggregated summary saved to {agg_path}")
+
+    return df
+
+
+if __name__ == "__main__":
+    results_df = main()
